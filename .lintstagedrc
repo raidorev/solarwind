@@ -1,0 +1,8 @@
+{
+  "*.{js,jsx,ts,tsx,vue,md,css,sass,scss,html}": [
+    "prettier --write"
+  ],
+  "*.(js|jsx|ts|tsx|vue)": [
+    "eslint --cache"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "name": "@raidorev/solarwind",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Vue3 UI Framework based on TailwindCSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raidorev/solarwind.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/solarwind.umd.js",
+  "module": "./dist/solarwind.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/solarwind.es.js",
+      "require": "./dist/solarwind.umd.js"
+    }
+  },
+  "scripts": {
+    "postinstall": "husky install",
+    "dev": "vite --config playground/vite.config.ts",
+    "build": "vue-tsc --noEmit && vite build",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit",
+    "check-size": "size-limit",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "solarwind": "link:./src",
+    "vue": "^3.2.20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/cz-commitlint": "^13.2.1",
+    "@commitlint/prompt": "^13.2.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@size-limit/preset-big-lib": "^6.0.3",
+    "@types/lodash-es": "^4.17.5",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "@vitejs/plugin-vue": "^1.9.3",
+    "autoprefixer": "^10.3.7",
+    "commitizen": "^4.2.4",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-lodash": "^7.3.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-regexp": "^1.4.1",
+    "eslint-plugin-sonarjs": "^0.10.0",
+    "eslint-plugin-unicorn": "^37.0.1",
+    "eslint-plugin-vue": "^7.20.0",
+    "husky": "^7.0.4",
+    "inquirer": "^8.2.0",
+    "lint-staged": "^11.2.4",
+    "postcss": "^8.3.11",
+    "prettier": "^2.4.1",
+    "semantic-release": "^18.0.0",
+    "size-limit": "^6.0.3",
+    "tailwindcss": "^2.2.17",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.10",
+    "vue-tsc": "^0.3.0"
+  },
+  "packageManager": "yarn@3.0.2"
+}
