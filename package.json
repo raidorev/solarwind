@@ -21,10 +21,10 @@
   "scripts": {
     "postinstall": "husky install",
     "dev": "vite --config playground/vite.config.ts",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --project tsconfig.solarwind.json --noEmit && vite build",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "typecheck": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc --project tsconfig.solarwind.json --noEmit",
     "check-size": "size-limit",
     "commit": "cz",
     "semantic-release": "semantic-release"
