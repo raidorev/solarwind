@@ -26,6 +26,7 @@
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",
     "check-size": "size-limit",
+    "commit": "cz",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
