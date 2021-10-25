@@ -3,10 +3,10 @@ import { provide, inject } from 'vue'
 import { defaultsDeep } from 'lodash-es'
 import { configSymbol } from 'solarwind/utils/symbols'
 import type { PartialDeep } from 'type-fest'
-import type { SolarwindOptions } from 'solarwind/types'
+import type { SolarwindConfig } from 'solarwind/types'
 
 type Props = {
-  config: PartialDeep<SolarwindOptions>
+  config: PartialDeep<SolarwindConfig>
 }
 const props = defineProps<Props>()
 

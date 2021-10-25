@@ -1,7 +1,7 @@
 import type { InjectionKey } from 'vue'
 import type { PartialDeep } from 'type-fest'
-import type { SolarwindOptions } from 'solarwind/types'
+import type { SolarwindConfig } from 'solarwind/types'
 
-export const configSymbol: InjectionKey<PartialDeep<SolarwindOptions>> = Symbol(
+export const configSymbol: InjectionKey<PartialDeep<SolarwindConfig>> = Symbol(
   '[solarwind]: config',
 )

@@ -1,1 +1,1 @@
-export interface SolarwindOptions {}
+export interface SolarwindConfig {}
