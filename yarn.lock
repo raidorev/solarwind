@@ -959,6 +959,7 @@ __metadata:
     semantic-release: ^18.0.0
     size-limit: ^6.0.3
     solarwind: "link:./src"
+    superstruct: ^0.15.3
     tailwindcss: ^2.2.17
     type-fest: ^2.5.1
     typescript: ^4.4.4
@@ -10135,6 +10136,13 @@ fsevents@~2.3.2:
   peerDependencies:
     postcss: ^8.2.15
   checksum: 777dbed3987e04f713b9d74e08f66ab4c23c76cabb07c666c0ae9a06e58e8961063e17b5c7b9c23421b75e9caa9fb78084688e509624e57b19c92c174fbd964d
+  languageName: node
+  linkType: hard
+
+"superstruct@npm:^0.15.3":
+  version: 0.15.3
+  resolution: "superstruct@npm:0.15.3"
+  checksum: b39a2caf28fd9e3f968f4aab504ea6646a2efe59609cc034ef9afef87cd84505b270683ad2bf609e6358ce36f09aab1cbacd4a5286706c28194597d91b31a453
   languageName: node
   linkType: hard
 
