@@ -25,7 +25,7 @@ const [error, config] = configSchema.validate(props.config)
 
 if (error) {
   console.warn(
-    'Invalid configuration provided inside "s-config-provider" component',
+    'Incorrect configuration is provided in "s-config-provider" component',
   )
   throw error
 }
