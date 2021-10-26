@@ -65,7 +65,12 @@ jobs:
 
       - name: Unit tests
         run: |
-          echo 1
+          yarn test
+
+      - name: Collect coverage
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
       - name: Build
         run: |
