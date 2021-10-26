@@ -13,7 +13,8 @@ describe('s-config-provider', () => {
   })
 
   it('should throw StructError when config has the wrong shape or type', () => {
-    const wrongConfigs = [
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const wrongConfigs: any[] = [
       {
         thisPropertyDoesNot: 'ExistsInConifg',
       },
