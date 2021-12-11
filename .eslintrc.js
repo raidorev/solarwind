@@ -87,6 +87,9 @@ module.exports = {
       env: {
         jest: true,
       },
+      rules: {
+        'sonarjs/no-duplicate-string': 'off',
+      },
     },
   ],
 }
