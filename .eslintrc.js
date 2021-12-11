@@ -54,21 +54,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.vue'],
-      extends: ['plugin:vue/vue3-essential'],
-      parserOptions: {
-        parser: '@typescript-eslint/parser',
-        extraFileExtensions: ['.vue'],
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      rules: {
-        'vue/component-definition-name-casing': ['error', 'kebab-case'],
-      },
-    },
-    {
-      files: ['**/*.ts'],
+      files: ['**/*.ts', '**/*.vue'],
       extends: ['plugin:@typescript-eslint/recommended'],
       parserOptions: {
         parser: '@typescript-eslint/parser',
@@ -79,6 +65,21 @@ module.exports = {
           { prefer: 'type-imports' },
         ],
         '@typescript-eslint/no-empty-interface': 'off',
+      },
+    },
+    {
+      files: ['**/*.vue'],
+      extends: ['plugin:vue/vue3-essential'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        extraFileExtensions: ['.vue'],
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      rules: {
+        'vue/component-definition-name-casing': ['error', 'kebab-case'],
       },
     },
     {
