@@ -15,11 +15,6 @@ module.exports = {
     'plugin:lodash/recommended',
     'prettier',
   ],
-  settings: {
-    jest: {
-      version: 26,
-    },
-  },
   plugins: ['import'],
   rules: {
     'import/order': [
