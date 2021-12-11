@@ -1,1 +1,3 @@
-export interface SolarwindConfig {}
+export interface SolarwindConfig {
+  orientation: 'ltr' | 'rtl'
+}
