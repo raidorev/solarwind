@@ -16,10 +16,14 @@ module.exports = {
     'prettier',
   ],
   plugins: ['import'],
+  settings: {
+    'import/internal-regex': '^solarwind/',
+  },
   rules: {
     'import/order': [
       'error',
       {
+        alphabetize: { order: 'asc' },
         groups: [
           'builtin',
           'external',
