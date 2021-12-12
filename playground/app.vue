@@ -6,5 +6,7 @@ const config: SolarwindConfig = {
 }
 </script>
 <template>
-  <s-app :config="config" />
+  <s-app :config="config">
+    {{ config.orientation }}
+  </s-app>
 </template>
