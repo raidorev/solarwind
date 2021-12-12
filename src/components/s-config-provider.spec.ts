@@ -1,5 +1,5 @@
 import { config, mount } from '@vue/test-utils'
-import { noop } from 'lodash'
+import { noop } from 'lodash-es'
 import SConfigProvider from 'solarwind/components/s-config-provider.vue'
 import { type SolarwindConfig } from 'solarwind/types'
 

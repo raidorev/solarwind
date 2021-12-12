@@ -1,5 +1,5 @@
 import { config, mount } from '@vue/test-utils'
-import { noop } from 'lodash'
+import { noop } from 'lodash-es'
 import { StructError } from 'superstruct'
 import { type SolarwindConfig } from 'solarwind/types'
 import { configSymbol } from 'solarwind/utils/symbols'
