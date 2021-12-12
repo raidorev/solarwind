@@ -1,5 +1,5 @@
 import { forEach, toPairs, head, split, last } from 'lodash-es'
-import type { App } from 'vue'
+import { type App } from 'vue'
 
 export const createSolarwind = () => ({
   install: (app: App) => {

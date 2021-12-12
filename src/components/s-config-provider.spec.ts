@@ -1,7 +1,7 @@
 import { config, mount } from '@vue/test-utils'
 import { noop } from 'lodash'
 import SConfigProvider from 'solarwind/components/s-config-provider.vue'
-import type { SolarwindConfig } from 'solarwind/types'
+import { type SolarwindConfig } from 'solarwind/types'
 
 config.global.config.warnHandler = noop
 

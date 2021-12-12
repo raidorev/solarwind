@@ -1,10 +1,10 @@
 import { config, mount } from '@vue/test-utils'
 import { noop } from 'lodash'
 import { StructError } from 'superstruct'
+import { type SolarwindConfig } from 'solarwind/types'
 import { configSymbol } from 'solarwind/utils/symbols'
 import { getError } from 'solarwind/utils/test'
 import { useConfig } from './config'
-import type { SolarwindConfig } from 'solarwind/types'
 
 config.global.config.warnHandler = noop
 

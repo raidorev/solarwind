@@ -1,8 +1,8 @@
 import { merge } from 'lodash-es'
 import * as s from 'superstruct'
 import { inject, provide } from 'vue'
+import { type SolarwindConfig } from 'solarwind/types'
 import { configSymbol } from 'solarwind/utils/symbols'
-import type { SolarwindConfig } from 'solarwind/types'
 
 const baseConfigScheme: s.Describe<SolarwindConfig> = s.object({
   orientation: s.enums(['rtl', 'ltr']),
