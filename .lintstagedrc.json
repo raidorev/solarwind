@@ -1,4 +1,9 @@
 {
   "*.{js,jsx,ts,tsx,vue,md,css,sass,scss,html}": ["prettier --write"],
-  "*.(js|jsx|ts|tsx|vue)": ["eslint --cache", "jest --bail --findRelatedTests"]
+  "*.(js|jsx|ts|tsx|vue)": ["eslint --cache", "jest --bail --findRelatedTests"],
+  "yarn.lock": [
+    "yarn dedupe",
+    "yarn dedupe --check",
+    "yarn dlx @yarnpkg/doctor"
+  ]
 }
