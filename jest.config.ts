@@ -1,6 +1,10 @@
 export default {
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.{js,ts,vue}', '!**/*.d.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.{js,ts,vue}',
+    '!**/*.d.ts',
+    '!<rootDir>/src/types.ts',
+  ],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
   moduleNameMapper: {
