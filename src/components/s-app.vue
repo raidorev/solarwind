@@ -9,6 +9,8 @@ const props = defineProps<Props>()
 
 <template>
   <s-config-provider :config="props.config">
-    <slot />
+    <s-theme-provider>
+      <slot />
+    </s-theme-provider>
   </s-config-provider>
 </template>
