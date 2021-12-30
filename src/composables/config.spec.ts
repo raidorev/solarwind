@@ -113,5 +113,20 @@ describe('Config composable', () => {
 
       expect(error).toBeInstanceOf(StructError)
     })
+
+    it('should throw error when config cannot be founded', async () => {
+      const error = await getError<Error>(() => {
+        mount({
+          template: '{{ config.orientation }}',
+          setup() {
+            const config = useConfig()
+            return { config }
+          },
+        })
+      })
+
+      expect(error).toBeInstanceOf(Error)
+      expect(error?.message).toContain('Cannot get config')
+    })
   })
 })
