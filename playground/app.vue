@@ -1,12 +1,8 @@
 <script lang="ts" setup>
-import type { SolarwindConfig } from 'solarwind'
-
-const config: SolarwindConfig = {
-  orientation: 'ltr',
-}
+import { solar } from 'solarwind/presets'
 </script>
 <template>
-  <s-app :config="config">
-    {{ config.orientation }}
+  <s-app :config="solar">
+    {{ solar.orientation }}
   </s-app>
 </template>

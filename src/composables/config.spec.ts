@@ -1,6 +1,7 @@
 import { config, mount } from '@vue/test-utils'
 import { noop } from 'lodash-es'
 import { StructError } from 'superstruct'
+import { solar } from 'solarwind/presets'
 import { type SolarwindConfig } from 'solarwind/types'
 import { configSymbol } from 'solarwind/utils/symbols'
 import { getError } from 'solarwind/utils/test'
@@ -11,26 +12,18 @@ config.global.config.warnHandler = noop
 describe('Config composable', () => {
   describe('Use config', () => {
     it('should provide a new configuration', () => {
-      const config: SolarwindConfig = {
-        orientation: 'ltr',
-      }
-
       const component = mount({
         template: '{{ config.orientation }}',
         setup() {
-          const newConfig = useConfig(config)
+          const newConfig = useConfig(solar)
           return { config: newConfig }
         },
       })
 
-      expect(component.text()).toBe(config.orientation)
+      expect(component.text()).toBe(solar.orientation)
     })
 
     it('should provide the previous configuration', () => {
-      const config: SolarwindConfig = {
-        orientation: 'ltr',
-      }
-
       const component = mount(
         {
           template: '{{ config.orientation }}',
@@ -42,13 +35,13 @@ describe('Config composable', () => {
         {
           global: {
             provide: {
-              [configSymbol as symbol]: config,
+              [configSymbol as symbol]: solar,
             },
           },
         },
       )
 
-      expect(component.text()).toBe(config.orientation)
+      expect(component.text()).toBe(solar.orientation)
     })
 
     it('should forbid passing a partial configuration to the top level configuration', async () => {

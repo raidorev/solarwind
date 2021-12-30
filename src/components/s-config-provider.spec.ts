@@ -1,7 +1,7 @@
 import { config, mount } from '@vue/test-utils'
 import { noop } from 'lodash-es'
 import SConfigProvider from 'solarwind/components/s-config-provider.vue'
-import { type SolarwindConfig } from 'solarwind/types'
+import { solar } from 'solarwind/presets'
 
 config.global.config.warnHandler = noop
 
@@ -9,9 +9,7 @@ describe('s-config-provider', () => {
   it('should provide config', () => {
     const component = mount(SConfigProvider, {
       props: {
-        config: {
-          orientation: 'ltr',
-        } as SolarwindConfig,
+        config: solar,
       },
       slots: {
         default: `
