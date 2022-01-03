@@ -8,7 +8,7 @@ const theme = useTheme(provider)
 </script>
 
 <template>
-  <div ref="provider">
+  <div ref="provider" class="h-full">
     <slot :theme="theme" />
   </div>
 </template>
