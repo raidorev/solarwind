@@ -6,7 +6,7 @@ module.exports = {
   '*.{js,jsx,ts,tsx,vue,md,css,sass,scss,html}': withFiles([
     `prettier --write`,
   ]),
-  '*.(js|jsx|ts|tsx|vue)': withFiles([
+  '*.{js,jsx,ts,tsx,vue}': withFiles([
     'eslint --cache',
     'jest --bail --findRelatedTests',
   ]),
