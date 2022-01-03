@@ -4,10 +4,14 @@ import { type SolarwindTheme } from 'solarwind/types'
 import { useConfig } from './config'
 
 export const useTheme = (
-  wrapper: Ref<HTMLElement | undefined>,
+  wrapper?: Ref<HTMLElement | undefined>,
   name?: string,
 ): SolarwindTheme => {
   const config = useConfig()
+
+  if (!wrapper) {
+    return config.themes[config.theme]
+  }
 
   const themeName = name || config.theme
   if (name) {

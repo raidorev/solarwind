@@ -33,6 +33,27 @@ describe('Theme composable', () => {
       expect(component.text()).toBe('solar')
     })
 
+    it('should return current theme when no arguments provided', () => {
+      const component = mount(
+        {
+          template: '{{ theme.name }}',
+          setup() {
+            const theme = useTheme()
+            return { theme }
+          },
+        },
+        {
+          global: {
+            provide: {
+              [configSymbol as symbol]: config,
+            },
+          },
+        },
+      )
+
+      expect(component.text()).toBe('solar')
+    })
+
     it('should set css variables on wrapper', () => {
       const component = mount(componentOptions, {
         global: {
