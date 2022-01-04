@@ -79,5 +79,5 @@
     "vite": "^2.7.1",
     "vue-tsc": "^0.29.8"
   },
-  "packageManager": "yarn@3.0.2"
+  "packageManager": "yarn@3.1.1"
 }
