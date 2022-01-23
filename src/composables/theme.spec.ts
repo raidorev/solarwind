@@ -1,11 +1,13 @@
-import { mount } from '@vue/test-utils'
-import { map } from 'lodash-es'
+import { mount, config as vueConfig } from '@vue/test-utils'
+import { map, noop } from 'lodash-es'
 import { ref } from 'vue'
 import { solar } from 'solarwind/presets'
 import { type SolarwindTheme } from 'solarwind/types'
 import { configSymbol } from 'solarwind/utils/symbols'
 import { getError } from 'solarwind/utils/test'
 import { useTheme } from './theme'
+
+vueConfig.global.config.warnHandler = noop
 
 describe('Theme composable', () => {
   describe('useTheme', () => {
