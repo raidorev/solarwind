@@ -9,6 +9,9 @@ describe('Color utils', () => {
         '#ffffff': [255, 255, 255, 255],
         '#000000': [0, 0, 0, 255],
         '#fcbbee10': [252, 187, 238, 16],
+        '#fff': [255, 255, 255, 255],
+        '#fff0': [255, 255, 255, 0],
+        '#ffee11': [255, 238, 17, 255],
       }
 
       for (const [hex, rgba] of Object.entries(colors)) {
@@ -22,7 +25,7 @@ describe('Color utils', () => {
       })
 
       expect(error).toBeInstanceOf(SolarwindError)
-      expect(error?.message).toBe('[utils:color] Invalid hex format')
+      expect(error?.message).toContain('[utils:color] Invalid hex format')
     })
 
     it('should throw error when string is not hex number', async () => {
@@ -31,7 +34,7 @@ describe('Color utils', () => {
       })
 
       expect(error).toBeInstanceOf(SolarwindError)
-      expect(error?.message).toBe('[utils:color] Invalid hex format')
+      expect(error?.message).toContain('[utils:color] Invalid hex format')
     })
   })
 })
